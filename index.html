@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f0f0f0;
+      padding: 20px;
+      margin: 0;
+    }
+    .login-container {
+      text-align: center;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .login-header img {
+      max-width: 100%;
+      height: auto;
+    }
+    .login-header h2 {
+      margin-top: 10px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .login-header p {
+      margin-top: 5px;
+      font-size: 14px;
+    }
+    .iframe-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 9999;
+      display: none;
+    }
+    .iframe-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    @media (max-width: 576px) {
+      .login-container {
+        padding: 10px;
+      }
+      .login-header h2 {
+        font-size: 24px;
+      }
+      .login-header p {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- login-container ที่มีกรอบและสไตล์ของมัน -->
+  <div class="login-container" id="loginContainer">
+    <div class="login-header">
+      <img src="https://od.lk/d/NzBfMTY0MjgzNTZf/image_2023-12-31_161000950.png" alt="คลังข้อสอบจำลองสอบเข้า ม.4">
+      <h2>คลังข้อสอบจำลองสอบเข้า ม.4</h2>
+      <p>ห้องเรียนปกติ โรงเรียนรัตนบุรี</p>
+    </div>
+    <form id="loginForm">
+      <div class="form-group">
+        <input type="password" id="passwordInput" class="form-control" placeholder="รหัสผ่าน">
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">เข้าสู่ระบบ</button>
+    </form>
+  </div>
+
+  <div class="iframe-container" id="iframeContainer">
+    <iframe id="contentFrame" src=""></iframe>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+  <script>
+      document.addEventListener('contextmenu', event => event.preventDefault());
+  </script>
+
+  <script>
+      document.onkeydown = function (event) {
+          if (event.keyCode === 123) { // F12
+              return false;
+          } else if (event.ctrlKey && event.shiftKey && event.keyCode === 73) { // Ctrl+Shift+I
+              return false;
+          } else if (event.ctrlKey && event.shiftKey && event.keyCode === 67) { // Ctrl+Shift+C
+              return false;
+          } else if (event.ctrlKey && event.keyCode === 85) { // Ctrl+U
+              return false;
+          }
+      };
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
