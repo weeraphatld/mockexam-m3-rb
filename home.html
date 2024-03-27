@@ -1,8 +1,101 @@
-คิดเมนูอาหารที่เหมาะสมกับช่วงวัยเด็กปฐมวัย พร้อมทั้ง บอกข้อมูลดังต่อไปนี้
-(1) เหตุผลทำไมถึงเลือกเมนูนี้
-(2) ภาพอาหาร
-(3)คุณค่าทางโภชนาการ ประกอบด้วยสารอาหารใดบ้าง
-(4) ประโยชน์ที่ร่างกายจะได้รับ
-(5) บอกพลังงาน (กิโลแคลอรี่) ที่ได้รับต่อ 1 จานหรือสำรับอาหาร
-พร้อมบอกแหล่งอ้างอิงของข้อมูล
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 20px;
+    }
 
+    th, td {
+      border: 1px solid #ccc;
+      padding: 6px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f0f0f0;
+    }
+
+    .blue {
+      color: blue;
+    }
+
+    .red {
+      color: red;
+    }
+
+    .black {
+      color: black;
+    }
+
+    .blue {
+      color: #1303fc;
+    }
+
+    .bg-light-yellow {
+  background-color: #f6faaa; /* This is a lighter yellow color */
+}
+ 
+</style>
+</head>
+<body>
+
+ <div class="col-md-6 mx-auto welcome card bg-white shadow my-2 bg">
+      <div class="card-body bg-white">
+        <div class="h3 form_title text-center mt-2">คลังข้อสอบ สอบเข้า ม.4</br>ห้องเรียนปกติ โรงเรียนรัตนบุรี</div>
+        <div class="text-center col-md-6 mx-auto">
+          <img id="pic2" src="stn.png" width="100px">
+        </div>
+        <div class="text-center">
+<table>
+    <thead>
+      <tr>
+        <th class="fs-6 fst-italic">รายละเอียด</th>
+        <th class="fs-6 fst-italic">ฝึกทำข้อสอบ</th>
+        <th class="fs-6 fst-italic">เฉลย</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="black fs-6">ข้อสอบจริงวิชาคณิต สายวิทย์ (สอบเมื่อปี 65)</td>
+        <td><a href="https://docs.google.com/forms/d/e/1FAIpQLSdr9e38_BZbOQ4wMENUYQjM5bz6Ac3ZX2qD04YFjNPrnWDw2w/viewform?usp=sf_link" target="_blank"><i class="fa fa-link"></i></a></td>
+        <td><a href="https://drive.google.com/file/d/1dJETFXFw6vws52e9lxVNV3Xv-t10JlwX/view?usp=drive_link" target="_blank"><i class="fa fa-link"></i></a></td>
+      </tr>
+      <tr>
+        <td class="black fs-6">ข้อสอบจริงวิชาคณิต สายวิทย์ (สอบเมื่อปี 66)</td>
+        <td class="fs-6 red">ทำแค่เฉลยนะครับ</td>
+        <td><a href="https://drive.google.com/file/d/1E-RylQrqtWo9Qz1CjqTOuUe_-QQC0TZ2/view?usp=sharing" target="_blank"><i class="fa fa-link"></i></a></td>
+      </tr>
+      <tr>
+        <td class="black fs-6">(จำลอง) วิชาวิทยาศาสตร์ สายวิทย์ ชุดที่ 1</td>
+        <td><a href="https://forms.gle/HGhtMLQqHhDaSEQYA" target="_blank"><i class="fa fa-link"> +เฉลย</i></a></td>
+        <td class="fs-6 red">-</td>
+      </tr>
+      <tr>
+        <td class="black fs-6">(จำลอง) วิชาวิทยาศาสตร์ สายวิทย์ ชุดที่ 2</td>
+        <td><a href="https://forms.gle/6TTqVk5LwenNjqYL7" target="_blank"><i class="fa fa-link"> +เฉลย</i></a></td>
+        <td class="fs-6 red">-</td>
+      </tr>
+      <tr>
+        <td class="blue fs-6 bg-light-yellow"><i class="fa fa-key" aria-hidden="true"></i> รหัสผ่านเข้าทำข้อสอบและดูไฟล์เฉลย : weloverb </td>
+      </tr>
+    </tbody>
+  </table></br>
+
+        </div>
+      </div>
+    </div>
+<script>
+    if (!sessionStorage.getItem('isAuthenticated')) {
+        window.location.href = 'index.html'; 
+    }
+</script>
+</body>
+</html>
