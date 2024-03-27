@@ -1,39 +1,62 @@
 body {
-  background-color: #f0f0f0;
-  padding: 20px;
+  background-color: #e6f2ff; /* Light blue background */
+  font-family: Arial, sans-serif; /* Professional font choice */
   margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
+
 .login-container {
-  text-align: center;
-  border: 2px solid #ccc;
-  border-radius: 8px;
+  border: 2px solid #007bff; /* Blue border */
+  border-radius: 10px;
   padding: 20px;
   background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin: auto;
-  width: fit-content;
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.5); /* Blue shadow for depth */
+  width: 100%;
+  max-width: 400px; /* Responsive width */
 }
+
 .login-header img {
-  max-width: 100%;
-  height: auto;
+  width: 100px; /* Adjusted logo size */
+  margin-bottom: 10px;
 }
+
 .login-header h2 {
-  margin-top: 10px;
-  font-size: 18px;
-  font-weight: bold;
+  color: #007bff; /* Blue text for the header */
+  margin: 10px 0;
 }
+
 .login-header p {
-  margin-top: 5px;
-  font-size: 14px;
+  color: #333; /* Subtle text color */
 }
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-control {
+  border-radius: 20px; /* Rounded input fields */
+  border: 1px solid #007bff;
+}
+
+.btn-primary {
+  background-color: #007bff; /* Blue button */
+  border: none;
+  border-radius: 20px; /* Rounded button */
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 123, 255, 0.4); /* Button shadow */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.6);
+}
+
 @media (max-width: 576px) {
   .login-container {
     padding: 10px;
-  }
-  .login-header h2 {
-    font-size: 24px;
-  }
-  .login-header p {
-    font-size: 18px;
   }
 }
