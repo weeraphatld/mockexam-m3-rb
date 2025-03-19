@@ -5,7 +5,7 @@
 
     function validateCode() {
       const input = document.getElementById('password').value;
-      const decoded = atob('c3R1ZGVudHJiMjU2Nw=='); 
+      const decoded = atob('c3R1ZGVudHJiMjU2OA=='); 
       if (input === decoded) {
           sessionStorage.setItem('isAuthenticated', 'true');
           Swal.fire({
